@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block form%}
+<div style="background-image: url(./static/images/bgimage.png); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% auto;">
+    <div class="container">
+        <a href="/"><button class="btn btn-primary btn-lg float-right mt-3">Main</button></a><br>
+    </div>
+    <div class="container col-xs-5 col-md-4 mt-5" style="opacity: 0.8;">
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Taking For Prediction</h3>
+            </div>
+            <div class="card-body">
+                <form action="/predict"  method="POST">
+                    <div class="form-group">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" name="name" placeholder="Enter Your Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="marathon"><b>Marathon Name</b></label><br>
+                        <input type="text" name="marathon"  value = "Prague17" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="category"><b>Category</b></label> <br>
+                        <input type="radio" required name="category" value="MAM"><label for="MAM">&nbsp;MAM&nbsp;</label>
+                        <input type="radio" required name="category" value="WAM"><label for="WAM">&nbsp;WAM&nbsp;</label>
+						<input type="radio" required name="category" value="M40"><label for="M40">&nbsp;M40&nbsp;</label>
+						<input type="radio" required name="category" value="M45"><label for="M45">&nbsp;M45&nbsp;</label>
+						<input type="radio" required name="category" value="M50"><label for="M50">&nbsp;M50&nbsp;</label>
+						<input type="radio" required name="category" value="M55"><label for="M55">&nbsp;M55&nbsp;</label>
+                    </div>	
+	                   
+                    <div class="form-group">
+                        <label for="km4week"><b>Kms for Week</b></label><br>
+                        <input type="number" step="0.01" min ="10" max = "150" name="km4week" placeholder="Enter kms" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="sp4week"><b>Speed for Week</b></label><br>
+                        <input type="number" step="0.01" min = "5" max ="20"name="sp4week" placeholder="Enter speed value" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="crosstraining"><b>Cross Training</b></label><br>
+                        <input type="radio" name="crosstraining" required value="Ciclista 1h"><label for="Ciclista 1h">&nbsp;Ciclista 1h&nbsp;</label>
+                        <input type="radio" name="crosstraining" required value="Ciclista 3h"><label for="Ciclista 3h">&nbsp;Ciclista 3h&nbsp;</label>
+						<input type="radio" name="crosstraining" required value="Ciclista 4h"><label for="Ciclista 4h">&nbsp;Ciclista 4h&nbsp;</label>
+						<input type="radio" name="crosstraining" required value="Ciclista 5h"><label for="Ciclista 5h">&nbsp;Ciclista 5h&nbsp;</label>
+						<input type="radio" name="crosstraining" required value="Ciclista 13h"><label for="Ciclista 13h">&nbsp;Ciclista 13h&nbsp;</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="wall21"><b>Wall21</b></label><br>
+                        <input type="number" step="0.01" min = "1" max = "5" name="wall21" placeholder="Enter wall21 value" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="finalcat"><b>Category of the athlete</b></label> <br>
+                        <input type="radio" required name="finalcat" value="A"><label for="A">&nbsp;A&nbsp;</label>
+                        <input type="radio" required name="finalcat" value="B"><label for="B">&nbsp;B&nbsp;</label>
+                        <input type="radio" required name="finalcat" value="C"><label for="C">&nbsp;C&nbsp;</label>
+                    </div>
+                    <div class="container">
+                        <button class="btn btn-success btn-lg" type="submit">Submit</button>
+                        <button class="btn btn-warning btn-lg float-right" type="reset">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+  </div>
+{% endblock%}

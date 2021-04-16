@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MTP</string>
+
+    <string name="nameerror"> Please enter valid name</string>
+    <string name="kmserror">Please enter values between 10.0 and 150.0  </string>
+    <string name="speederror">Please Enter values between 5.0 and 20.0</string>
+    <string name="mnameerror">Please Enter Valid Marathon Name</string>
+    <string name="wall21error">Please enter values between 1.0 and 5.0</string>
+</resources>

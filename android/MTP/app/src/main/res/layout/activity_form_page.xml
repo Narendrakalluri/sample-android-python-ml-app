@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_bright"
+    tools:context=".FormPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--    Image-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/main" />
+            <!--    Heading-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:text="Form"
+                android:textColor="@color/purple_500"
+                android:textSize="40sp" />
+
+            <!-- Name of the user-->
+
+            <!-- Displaying name of the marathon -->
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:hint="Enter Your Name"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/tv_marathonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:text="Prague17"
+                android:textSize="30sp" />
+
+            <!--    Category of the event-->
+            <!-- kms for week-->
+
+            <RadioGroup
+                android:id="@+id/rg_categoryEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="377dp"
+                    android:layout_height="wrap_content"
+                    android:text="Category Of The Event"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+
+                <RadioButton
+                    android:id="@+id/category_mam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="MAM"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/category_wam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="WAM"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/category_m40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="M40"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/category_m45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="M45"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/category_m50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="M50"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/category_m55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="M55"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_kms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:hint="Enter Kms for week"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <!--speed for week-->
+            <EditText
+                android:id="@+id/et_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:hint="Enter Speed for week"
+                android:inputType="numberDecimal"
+                android:textSize="30dp" />
+            <!--cross training-->
+            <RadioGroup
+                android:id="@+id/rg_CrossTraining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cross Training"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio_ct1h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclista 1h"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_ct3h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclista 3h"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_ct4h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclista 4h"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_ct5h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclista 5h"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_ct13h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclista 13h"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+            <!--wall21 value-->
+            <EditText
+                android:id="@+id/et_wall21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:hint="Enter wa1121"
+                android:inputType="numberDecimal"
+                android:textSize="30dp" />
+
+            <!--category of the athlete-->
+            <RadioGroup
+                android:id="@+id/rg_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio_catA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_catB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_catC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/resButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/purple_200"
+                android:onClick="MoveResult"
+                android:padding="10dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
